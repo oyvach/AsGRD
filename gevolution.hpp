@@ -1730,7 +1730,11 @@ void projection_Tij_project(Particles<part, part_info, part_dataType> *pcls, Fie
 }
 
 #ifndef projection_Tij_comm
+#ifndef CIC_PROJECT_TIJ
 #define projection_Tij_comm symtensorProjectionCICNGP_comm
+#else
+#define projection_Tij_comm VecVecProjectionCIC_comm
+#endif
 #endif
 
 //////////////////////////
