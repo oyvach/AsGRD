@@ -722,15 +722,15 @@ bool parseFieldSpecifiers(parameter *&params, const int numparam, const char *pn
 				pvalue |= MASK_ACHI;
 			else if (strcmp(start, "Aq") == 0 || strcmp(start, "aq") == 0)
 				pvalue |= MASK_AQ;
-			else if (strcmp(item, "T00_As") == 0 || strcmp(item, "T00_as") == 0)
+			else if (strcmp(start, "T00_As") == 0 || strcmp(start, "T00_as") == 0)
 				pvalue |= MASK_T00_AS;
-			else if (strcmp(item, "eos_As") == 0 || strcmp(item, "eos_as") == 0)
+			else if (strcmp(start, "eos_As") == 0 || strcmp(start, "eos_as") == 0)
 				pvalue |= MASK_EOS_AS;
-			else if (strcmp(item, "source") == 0 || strcmp(item, "rhocdm") == 0)
+			else if (strcmp(start, "source") == 0 || strcmp(start, "rhocdm") == 0)
 				pvalue |= MASK_SOURCE;
-			else if (strcmp(item, "hij_prime") == 0 || strcmp(item, "HIJ_PRIME") == 0)
+			else if (strcmp(start, "hij_prime") == 0 || strcmp(start, "HIJ_PRIME") == 0)
 				pvalue |= MASK_HIJPRIME;
-			else if (strcmp(item, "hij_prime_norm") == 0 || strcmp(item, "HIJ_PRIME_NORM") == 0)
+			else if (strcmp(start, "hij_prime_norm") == 0 || strcmp(start, "HIJ_PRIME_NORM") == 0)
 				pvalue |= MASK_HIJPRIMENORM;
 			/*--------------------------------------------*/
 			else if (strcmp(start, "Chi") == 0 || strcmp(start, "chi") == 0)
