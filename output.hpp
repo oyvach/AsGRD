@@ -211,6 +211,7 @@ void writeSnapshots(int isSecondary, metadata &sim, cosmology &cosmo, double avg
 		else
 			phi->saveHDF5(h5filename + filename + "_phi.h5");
 #endif
+	}
 		//-------------------Modification----------------------------
 		if (out_snapshot & MASK_ACHI && sim.aMG <= a)
 		{
@@ -438,7 +439,6 @@ void writeSnapshots(int isSecondary, metadata &sim, cosmology &cosmo, double avg
 #ifdef EXTERNAL_IO
 		ioserver.closeOstream();
 #endif
-	}
 }
 void writeAnimation(metadata &sim, cosmology &cosmo, double avgsource, const double fourpiG,
 					const double a, const double dtau_old, const int animcount, string h5filename,
