@@ -619,7 +619,6 @@ void doUpdateParticlesAndBackground(
     // cdm and baryon particle update
     f_params[0] = a;
     f_params[1] = a * a * (double)sim.numpts;
-    f_params[3] = Hconf(a, fourpiG, cosmo, avgsource);
     if (sim.As_5th_force * sim.fifth > 0) // modification
     {
         maxvel[0] = pcls_cdm.updateVel(update_q_5th, (dtau + dtau_old) / 2., update_cdm_fields, nfields, f_params);
@@ -652,7 +651,6 @@ void doUpdateParticlesAndBackground(
 
     f_params[0] = a;
     f_params[1] = a * a * (double)sim.numpts;
-    f_params[3] = Hconf(a, fourpiG, cosmo, avgsource);
     if (sim.As_5th_force * sim.fifth > 0) // modification
     {
         pcls_cdm.moveParticles(update_pos_5th, dtau, update_cdm_fields, nfields, f_params);
