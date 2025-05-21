@@ -504,7 +504,7 @@ void doConstructAchiSEtensor(
         Sij(xField, 0, 1) = Acnf4 * Sij(xField, 0, 1) + Dy_achi * Dx_achi * a3;
         Sij(xField, 0, 2) = Acnf4 * Sij(xField, 0, 2) + Dz_achi * Dx_achi * a3;
         Sij(xField, 1, 2) = Acnf4 * Sij(xField, 1, 2) + Dz_achi * Dy_achi * a3;
-        nT_cdm(xField) = source(xField) - (double)(sim.As_full_trace) * (Sij(xField, 0, 0) + Sij(xField, 0, 0) + Sij(xField, 0, 0));
+        nT_cdm(xField) = source(xField) - (double)(sim.As_full_trace) * (Sij(xField, 0, 0) + Sij(xField, 1, 1) + Sij(xField, 2, 2));
 
         // do misc
         T00hom += source(xField);
